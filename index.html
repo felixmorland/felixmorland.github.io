@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Morland</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Rockwell", serif;
+            background-image: url('graphics/deepfield.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        h1, h2, h3, h4, h5, h6, .name {
+            font-family: 'Bodoni 72 Smallcaps';
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            height: 600px;
+            background: #252525;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 320px;
+            background: linear-gradient(180deg, #000000 0%, #171717 100%);
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            /* border: 4px dashed #666; */
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .name {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            color: #aaa;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ae0006;
+        }
+
+        .download-btn {
+            padding: 12px 30px;
+            border: 2px solid #fff;
+            border-radius: 25px;
+            color: #fff;
+            background: transparent;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #fff;
+            color: #2a2a2a;
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            font-size: 11px;
+            color: #888;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            background: #0f0f0f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .content-text {
+            text-align: center;
+            color: #fff;
+        }
+
+        .content-text h1 {
+            color: #fff;
+            font-size: 56px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .content-text p {
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        /* Right Navigation */
+        .right-nav {
+            width: 60px;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            gap: 30px;
+        }
+
+        .nav-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 8px;
+        }
+
+        .nav-icon:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-icon.active {
+            background: #ff9a9e;
+        }
+
+        /* Menu Toggle */
+        .menu-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: #fff;
+        }
+
+        /* Arrow Navigation */
+        .arrow-nav {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .arrow-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .arrow-btn:hover {
+            background: #ff9a9e;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .right-nav {
+                width: 100%;
+                flex-direction: row;
+                height: 60px;
+                padding: 0 20px;
+            }
+
+            .content-text h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="profile-img">
+                <img src="graphics/felix.jpeg" alt="Felix Morland">
+            </div>
+            <h1 class="name">Felix Morland 🌌</h1>
+            <p class="title"><i>University of Oslo</i></p>
+            <div class="social-links">
+                <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
+                <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <!-- <button class="download-btn">Download CV</button> -->
+            <p class="content-text">Master student at the Institute for Theoretical Astrophysics</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="content-text">
+                <h2>Astrophysical projects</h2>
+                <p> </p>
+                <p> Vector perturbations assuming \[\nabla_\mu T^{\mu\nu}_\mathrm{dm} = \bar{\alpha}(u^{\nu}_\mathrm{de}-u^{\nu}_\mathrm{dm})=-\nabla_\mu T^{\mu\nu}_\mathrm{de}\] </p>
+                <h2>Roterommet</h2>
+                <p>tihi</p>
+            </div>
+            
+
+            <!-- <div class="arrow-nav">
+                <div class="arrow-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="arrow-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Right Navigation -->
+        <!-- <div class="right-nav">
+            <div class="nav-icon active">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="nav-icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="nav-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="nav-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="nav-icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="nav-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div> -->
+    </div>
+
+    <script>
+        // Add click handlers for navigation
+        document.querySelectorAll('.nav-icon').forEach(icon => {
+            icon.addEventListener('click', function() {
+                document.querySelectorAll('.nav-icon').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Menu toggle animation
+        const menuToggle = document.querySelector('.menu-toggle');
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
