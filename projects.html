@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Felix Morland</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+                <nav class="menu-dropdown">
+                    <a href="index.html" class="menu-item">Home</a>
+                    <a href="projects.html" class="menu-item">Projects</a>
+                </nav>
+            </div>
+
+            <div class="content-text">
+                <h2>Projects</h2>
+                <div class="projects-list">
+                    <div class="project-item">
+                        <h3>Astrophysical Simulations</h3>
+                        <p>Vector perturbations in dark energy models</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Roterommet</h3>
+                        <p>Community collaboration project</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Data Analysis Tools</h3>
+                        <p>Python tools for astrophysical data processing</p>
+                    </div>
+                </div>
+                <nav class="page-nav">
+                    <a href="index.html" class="nav-link">← Back to Home</a>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Menu toggle animation
+        const menuToggle = document.querySelector('.menu-toggle');
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+        });
+
+        // Close menu when clicking elsewhere
+        document.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
