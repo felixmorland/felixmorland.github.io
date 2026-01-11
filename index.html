@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felix Morland</title>
+    <link rel="icon" href="graphics/favicon.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -16,14 +17,20 @@
                 <img src="graphics/felix.jpeg" alt="Felix Morland">
             </div>
             <h1 class="name">Felix Morland 🌌</h1>
-            <p class="title"><i>University of Oslo</i></p>
+            <p class="title">📍<i>Oslo, Norway</i></p>
             <div class="social-links">
-                <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
                 <a href="mailto:astro@felixmorland.no" class="mail-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 <a href="https://github.com/felixmorland"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/felixmorland/"><i class="fab fa-instagram"></i></a>
             </div>
-            <!-- <button class="download-btn">Download CV</button> -->
-            <p class="content-text">Master student at the Institute for Theoretical Astrophysics</p>
+            
+
+            <p class="smalltext">Academic interests: dark sector coupling, cosmology, theoretical physics</p>
+            <p class="smalltext">General interests: jazz music, bass, travelling, languages, culture, photography, philosophy </p>
+        
+            <div class="hero-cta">
+                        <a href="resume.pdf" class="download-btn" aria-label="Download CV">Curriculum Vitae</a>
+                    </div>
         </div>
 
         <!-- Main Content -->
@@ -37,23 +44,47 @@
             </div>
 
             <div class="content-text">
-                <h2>Astrophysical projects</h2>
-                <p> </p>
-                <p> Vector perturbations assuming \[\nabla_\mu T^{\mu\nu}_\mathrm{dm} = \bar{\alpha}(u^{\nu}_\mathrm{de}-u^{\nu}_\mathrm{dm})=-\nabla_\mu T^{\mu\nu}_\mathrm{de}\] </p>
-                <h2>Roterommet</h2>
-                <p>tihi</p>                <nav class="page-nav">
-                    <a href="projects.html" class="nav-link">View All Projects →</a>
-                </nav>            </div>
-            
+                <section class="hero">
+                    <h2 class="hero-title">MSc Astrophysics</h2>
+                    <p class="hero-summary">I am currently enrolled in the Master's program in Astrophysics at the University of Oslo. For my thesis, I am studying vector perturbations for a Lagrangian with terms describing elastic dark sector coupling.</p>
+                </section>
 
-            <!-- <div class="arrow-nav">
-                <div class="arrow-btn">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-                <div class="arrow-btn">
-                    <i class="fas fa-chevron-left"></i>
-                </div>
-            </div> -->
+                <section id="experience" class="section">
+                    <h3>Experience</h3>
+                    <div class="experience-list">
+                        <article class="exp-item">
+                            <div class="exp-head">
+                                <h4>Teaching Assistant</h4>
+                                <time>2023 — Today</time>
+                            </div>
+                            <p>Department of Physics, University of Oslo</p>
+                            <ul>
+                                <li>I have assisted in teaching the classical mechanics course <a href="https://www.uio.no/studier/emner/matnat/fys/FYS1105/index-eng.html" class="course">FYS1105</a> and the electromagnetism course <a href="https://www.uio.no/studier/emner/matnat/fys/FYS1120/index-eng.html" class="course">FYS1120</a> to undergraduate students and corrected assignments and exams.</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <h3>Projects</h3>
+                    <div class="projects-list">
+                        <div class="project-item">
+                            <h4>Astrophysical Simulations</h4>
+                            <p>Vector perturbations in dark energy models</p>
+                        </div>
+                        <div class="project-item">
+                            <h4>roterommet</h4>
+                            <p>"roterommet" is a jazz trio I have together with two great friends of mine that are also astrophysics students. The name "roterommet" is an hommage to J. O. Øgrim and H. Ormestad.</p>
+                        </div>
+                        <div class="project-item">
+                            <h4>Data Analysis Tools</h4>
+                            <p>Python tools for astrophysical data processing</p>
+                        </div>
+                    </div>
+                    
+                    <nav class="page-nav">
+                        <a href="projects.html" class="nav-link">View All Projects →</a>
+                    </nav>
+                </section>
+            </div>
         </div>
 
     </div>
