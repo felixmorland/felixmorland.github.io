@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Fusion and Stratification</title>
+    <meta name="description" content="Simulation of stellar fusion, structure, and convective motion, by Felix Morland.">
+    <link rel="icon" href="/graphics/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="topnav">
+        <a href="/index.html" class="brand"><img src="/graphics/favicon.ico"></a>
+        <nav class="topnav-links">
+            <a href="/index.html" class="topnav-link">Home</a>
+            <a href="/projects.html" class="topnav-link active">Projects</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="content-text project-detail">
+                <a href="/projects.html" class="back-link">← All projects</a>
+
+                <div class="project-preview preview-plastro large"></div>
+
+                <span class="eyebrow">Simulation</span>
+                <h1>Stellar Fusion and Stratification</h1>
+                <h4>Modelling nuclear fusion, structure, and convective energy transport in a solar-like star</h4>
+                <p class="project-meta">Python · Stellar Astrophysics</p>
+
+                <a href="https://github.com/felixmorland/AST3310" class="github-btn"><i class="fab fa-github"></i> GitHub repository</a>
+                <div class="project-body">
+                    <p>I developped this simulation as part of the undergraduate course Astrophysical Plasma and Stellar Interiors (<a href="https://www.uio.no/studier/emner/matnat/astro/AST3310/index-eng.html">AST3310</a>) at UiO. The project simulates a solar-like star in three connected parts. The first models the nuclear reaction rates and energy production in the core, tracking the PP chains and CNO cycle as functions of temperature and density to obtain the core's energy generation rate.</p>
+
+                    <p>The second part solves the stellar structure equations governing hydrostatic equilibrium, mass conservation, and energy transport,</p>
+
+                    <p class="equation">
+                        \begin{align*}
+                            \frac{\text{d}P}{\text{d}m} &= -\frac{Gm}{4\pi r^4}, \\
+                            \frac{\text{d}r}{\text{d}m} &= \frac{1}{4\pi r^2 \rho},
+                        \end{align*}</p>
+
+                    <p>to determine where energy transport is radiative and where the temperature gradient becomes steep enough for the star to stratify into a convective envelope.</p>
+
+                    <p>The third part resolves the convective motion in that outer envelope directly, solving the hydrodynamic equations on a 2D grid to model rising and sinking plumes of gas transporting energy outward beneath the stellar surface. It does this by solving the hydrodynamic equations</p>
+                    <p class="equation">
+                        \begin{align*}
+                            \frac{\partial\rho}{\partial t} + \nabla\cdot(\rho\mathbf{u})&=0,\\
+                            \frac{\partial\rho\mathbf{u}}{\partial t} + \nabla\cdot(\rho\mathbf{u}\otimes \mathbf{u}) &= -\nabla P + \rho\mathbf{g},\\
+                            \frac{\partial e}{\partial t} + \nabla\cdot (e\mathbf{u}) &= -P\nabla\cdot \mathbf{u}.
+                        \end{align*}
+                    </p>
+
+                    <p>The code also produces pretty animations :)</p>
+                    <a class="project-figure">
+                        <img src="/graphics/hydrodynamics.png" alt="Simulated convective motion">
+                    </a>
+                </div>
+
+                <nav class="project-pager">
+                    <a href="/projects/nslits.html" class="pager-link prev">← Wavepacket Through Multiple Slits</a>
+                    <a href="/projects/master.html" class="pager-link next">Dark Sector Coupling →</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

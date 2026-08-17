@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmological N-body Simulation</title>
+    <meta name="description" content="Numerical simulation of hierarchical cosmic structure formation using Gasoline2 and MUSIC, by Felix Morland.">
+    <link rel="icon" href="/graphics/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="topnav">
+        <a href="/index.html" class="brand"><img src="/graphics/favicon.ico"></a>
+        <nav class="topnav-links">
+            <a href="/index.html" class="topnav-link">Home</a>
+            <a href="/projects.html" class="topnav-link active">Projects</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="content-text project-detail">
+                <a href="/projects.html" class="back-link">← All projects</a>
+
+                <div class="project-preview preview-extragal large"></div>
+
+                <span class="eyebrow">Simulation</span>
+                <h1>Cosmological N-body Simulation</h1>
+                <h4>Simulating the hierarchical formation of large-scale cosmic structure from Gaussian initial conditions</h4>
+                <p class="project-meta">C++ · Gasoline2 · MUSIC</p>
+
+                <a href="/pdfs/numproject_ast4320.pdf" class="github-btn" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Project results</a>
+                <div class="project-body">
+                    <p>This project was completed as part of the Cosmology and Extragalactic Astrophysics course <a href="https://www.uio.no/studier/emner/matnat/astro/AST4320/index-eng.html">AST4320</a> at UiO. It numerically simulates the hierarchical formation of cosmological structure, from small initial density fluctuations to the filaments and haloes of the cosmic web. Initial conditions are generated with MUSIC, which uses the linear matter power spectrum to displace particles from a uniform grid according to the Zel'dovich approximation, producing a realisation of the early-Universe density field at high redshift.</p>
+
+                    <p>The resulting particle distribution is evolved forward in time with the N-body/SPH code Gasoline2, which computes gravitational forces with a tree algorithm and integrates each particle's trajectory under the combined gravitational field of all the others,</p>
+
+                    <p class="equation">$$\ddot{\mathbf{r}}_i = -G\sum_{j \neq i} m_j \frac{\mathbf{r}_i - \mathbf{r}_j}{|\mathbf{r}_i - \mathbf{r}_j|^3}$$</p>
+
+                    <p>As the simulation runs, overdense regions collapse and merge under their own gravity, building up the hierarchical, filamentary structure characteristic of the cosmic web. The results were analysed in the Press-Schechter formalism.</p>
+                </div>
+
+                <nav class="project-pager">
+                    <a href="/projects/rydberg.html" class="pager-link prev">← Rydberg Atom-Based Electrometry</a>
+                    <a href="/projects/nslits.html" class="pager-link next">Wavepacket Through Multiple Slits →</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

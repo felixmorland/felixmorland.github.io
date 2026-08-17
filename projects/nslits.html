@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wavepacket Through Multiple Slits</title>
+    <meta name="description" content="Numerical solution of the time-dependent Schrödinger equation for a wavepacket through multiple slits, by Felix Morland.">
+    <link rel="icon" href="/graphics/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="topnav">
+        <a href="/index.html" class="brand"><img src="/graphics/favicon.ico"></a>
+        <nav class="topnav-links">
+            <a href="/index.html" class="topnav-link">Home</a>
+            <a href="/projects.html" class="topnav-link active">Projects</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="content-text project-detail">
+                <a href="/projects.html" class="back-link">← All projects</a>
+
+                <div class="project-preview preview-nslits large"></div>
+
+                <span class="eyebrow">Simulation</span>
+                <h1>Wavepacket Through Multiple Slits</h1>
+                <h4>Solving the time-dependent Schrödinger equation numerically for a Gaussian wavepacket incident on multiple slits</h4>
+                <p class="project-meta">C++ · Quantum Physics · Numerical Methods</p>
+
+                <a href="https://github.com/felixmorland/FYS4150/tree/main/Project%205" class="github-btn"><i class="fab fa-github"></i> GitHub repository</a>
+                <div class="project-body">
+                    <p>This project was developed together with Arian Farhanieh and Kristoffer Alvarez Sandaune as part of the Computational Physics course <a href="https://www.uio.no/studier/emner/matnat/fys/FYS4150/index-eng.html">FYS4150</a>. It simulates the double- and multiple-slit experiment by evolving a two-dimensional Gaussian wavepacket directly under the time-dependent Schrödinger equation,</p>
+
+                    <p class="equation">$$i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\psi + V(x,y)\psi$$</p>
+
+                    <p>The slits are implemented as a thin, high potential wall with one or more narrow gaps, and the equation is discretised on a spatial grid and integrated in time using the Crank-Nicolson scheme, which is unconditionally stable and preserves the norm of the wavefunction to machine precision.</p>
+
+                    <p>As the wavepacket reaches the wall, it is diffracted through the slits, and the resulting sub-waves interfere on the far side, reproducing the characteristic interference pattern predicted analytically for one, two, and multiple slits.</p>
+                </div>
+
+                <nav class="project-pager">
+                    <a href="/projects/gasoline.html" class="pager-link prev">← Cosmological N-body Simulation</a>
+                    <a href="/projects/plastro.html" class="pager-link next">Stellar Fusion and Stratification →</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

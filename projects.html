@@ -4,61 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Felix Morland</title>
-    <link rel="icon" href="graphics/favicon.ico">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+    <meta name="description" content="Research, tools, and creative projects by Felix Morland.">
+    <link rel="icon" href="/graphics/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <header class="topnav">
+        <a href="/index.html" class="brand"><img src="/graphics/favicon.ico"></a>
+        <nav class="topnav-links">
+            <a href="/index.html" class="topnav-link">Home</a>
+            <a href="/projects.html" class="topnav-link active">Projects</a>
+        </nav>
+    </header>
+
     <div class="container">
-        <!-- Left Sidebar -->
-
-        <!-- Main Content -->
         <div class="main-content">
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-                <nav class="menu-dropdown">
-                    <a href="index.html" class="menu-item">Home</a>
-                    <a href="projects.html" class="menu-item">Projects</a>
-                </nav>
-            </div>
-
             <div class="content-text">
-                <h2>Projects</h2>
-                <div class="projects-list">
-                    <div class="project-item">
-                        <h3>Astrophysical Simulations</h3>
-                        <p>Vector perturbations in dark energy models</p>
+                <section class="section">
+                    <span class="eyebrow">Previous work</span>
+                    <h2>Projects</h2>
+                    <p class="page-intro">A selection of research, tools, and other projects of mine.</p>
+
+                    <div class="catalog-grid">
+                        <a href="/projects/master.html" class="catalog-card">
+                            <div class="project-preview preview-master"></div>
+                            <div class="catalog-card-body">
+                                <h3>Dark Sector Coupling</h3>
+                                <p>Master thesis work, still under development. Simulating vector perturbations for elastic dark sector coupling using CLASS.</p>
+                                <div class="tag-pills">
+                                    <span class="tag-pill">Master thesis</span>
+                                    <span class="tag-pill">Cosmology</span>
+                                    <span class="tag-pill">Perturbation theory</span>
+                                    <span class="tag-pill">CLASS</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/projects/eb-solver.html" class="catalog-card">
+                            <div class="project-preview preview-sim"></div>
+                            <div class="catalog-card-body">
+                                <h3>Einstein-Boltzmann Solver</h3>
+                                <p>A simple first principles-based Einstein-Boltzmann solver that simulates cosmic structure growth and the CMB from perturbations in the early Universe.</p>
+                                <div class="tag-pills">
+                                    <span class="tag-pill">Cosmology</span>
+                                    <span class="tag-pill">Perturbation theory</span>
+                                    <span class="tag-pill">C++</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/projects/rydberg.html" class="catalog-card">
+                            <div class="project-preview preview-rydberg"></div>
+                            <div class="catalog-card-body">
+                                <h3>Rydberg Atom-Based Electrometry</h3>
+                                <p>Researched quantum sensing, summarised in a compendium. The compendium contains mostly analytical derivations of key results and notes on how to simulate Rydberg vapour cells.</p>
+                                <div class="tag-pills">
+                                    <span class="tag-pill">Quantum sensing</span>
+                                    <span class="tag-pill">Research</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/projects/gasoline.html" class="catalog-card">
+                            <div class="project-preview preview-extragal"></div>
+                            <div class="catalog-card-body">
+                                <h3>Cosmological N-body Simulation </h3>
+                                <p>Numerical simulation of hierarchical formation of cosmological structure using Gasoline2 and MUSIC.</p>
+                                <div class="tag-pills">
+                                    <span class="tag-pill">Cosmology</span>
+                                    <span class="tag-pill">C++</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/projects/nslits.html" class="catalog-card">
+                            <div class="project-preview preview-nslits"></div>
+                            <div class="catalog-card-body">
+                                <h3>Wavepacket Through Multiple Slits</h3>
+                                <p>Solving the Schrödinger equation numerically for a wavepacket moving through multiple slits.</p>
+                                <div class="tag-pills">
+                                    <span class="tag-pill">Quantum physics</span>
+                                    <span class="tag-pill">C++</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/projects/plastro.html" class="catalog-card">
+                            <div class="project-preview preview-plastro"></div>
+                            <div class="catalog-card-body">
+                                <h3>Stellar Fusion and Stratification</h3>
+                                <p>Simulation of a star in three parts; the fusion reactions in the core, the stratification into convective and radiative layers, and the convective motion in the outer layer.</p>
+                                <div class="tag-pills">
+                                    <span class="tag-pill">Undergraduate</span>
+                                    <span class="tag-pill">Stellar Physics</span>
+                                    <span class="tag-pill">Python</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="project-item">
-                        <h3>Roterommet</h3>
-                        <p>Community collaboration project</p>
-                    </div>
-                    <div class="project-item">
-                        <h3>Data Analysis Tools</h3>
-                        <p>Python tools for astrophysical data processing</p>
-                    </div>
-                </div>
-                <nav class="page-nav">
-                    <a href="index.html" class="nav-link">← Back to Home</a>
-                </nav>
+                </section>
+
+                <p class="site-footer">2026 Felix Morland</p>
             </div>
         </div>
-
     </div>
-
-    <script>
-        // Menu toggle animation
-        const menuToggle = document.querySelector('.menu-toggle');
-        menuToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            this.classList.toggle('active');
-        });
-
-        // Close menu when clicking elsewhere
-        document.addEventListener('click', function() {
-            menuToggle.classList.remove('active');
-        });
-    </script>
 </body>
 </html>

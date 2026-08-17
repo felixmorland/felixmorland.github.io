@@ -4,113 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felix Morland</title>
-    <link rel="icon" href="graphics/favicon.ico">
+    <meta name="description" content="Felix Morland — MSc Astrophysics student at the University of Oslo. Research, projects, and teaching.">
+    <link rel="icon" href="/graphics/favicon.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <header class="topnav">
+        <a href="/index.html" class="brand"><img src="/graphics/favicon.ico"></img></a>
+        <nav class="topnav-links">
+            <a href="/index.html" class="topnav-link active">Home</a>
+            <a href="/projects.html" class="topnav-link">Projects</a>
+        </nav>
+    </header>
+
     <div class="container">
         <!-- Left Sidebar -->
         <div class="sidebar">
-            <div class="profile-img">
-                <img src="graphics/felix.jpeg" alt="Felix Morland">
+            <div class="profile-wrap">
+                <img class="black-hole-backdrop" src="/graphics/galaxy.png" alt="">
+                <div class="profile-img">
+                    <img src="/graphics/felix.jpeg" alt="Felix Morland">
+                </div>
             </div>
-            <h1 class="name">Felix Morland 🌌</h1>
-            <p class="title">📍<i>Oslo, Norway</i></p>
-            <div class="social-links">
-                <a href="mailto:astro@felixmorland.no" class="mail-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://github.com/felixmorland"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/felixmorland/"><i class="fab fa-instagram"></i></a>
-            </div>
-            
+            <h1 class="name">Felix Morland</h1>
+            <p class="role">MSc Student in Astrophysics</p>
+            <p class="location"><i class="fa-solid fa-location-dot"></i> Oslo, Norway</p>
 
-            <p class="smalltext">Academic interests: dark sector coupling, cosmology, theoretical physics</p>
-            <p class="smalltext">General interests: jazz music, bass, travelling, languages, culture, photography, philosophy </p>
-        
-            <div class="hero-cta">
-                        <a href="resume.pdf" class="download-btn" aria-label="Download CV">Curriculum Vitae</a>
-                    </div>
+            <div class="social-links">
+                <a href="mailto:astro@felixmorland.no" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/felixmorland" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/felixmorland/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <a href="/pdfs/felix_cv.pdf" class="download-btn" aria-label="Download CV">
+                    <i class="fa-solid fa-arrow-down"></i> Curriculum Vitae<sup>*</sup>
+                </a>
+            <p class="cv-note"><sup>*</sup>PDF is password-protected, <a href="mailto:astro@felixmorland.no" class="course">contact me</a> for access.</p>
+
+
+            <div class="tag-group">
+                <span class="tag-label">Academic interests</span>
+                <div class="tags">
+                    <span class="tag">Dark sector coupling</span>
+                    <span class="tag">Cosmology</span>
+                    <span class="tag">Theoretical physics</span>
+                    <span class="tag">Quantum field theory</span>
+                </div>
+            </div>
+
+            <div class="tag-group">
+                <span class="tag-label">General interests</span>
+                <div class="tags">
+                    <span class="tag">Jazz bass</span>
+                    <span class="tag">Travelling</span>
+                    <span class="tag">Languages</span>
+                    <span class="tag">Photography</span>
+                    <span class="tag">Philosophy</span>
+                </div>
+            </div>
+            <div class="sidebar-divider"></div>
         </div>
 
         <!-- Main Content -->
         <div class="main-content">
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-                <nav class="menu-dropdown">
-                    <a href="index.html" class="menu-item">Home</a>
-                    <a href="projects.html" class="menu-item">Projects</a>
-                </nav>
-            </div>
-
             <div class="content-text">
                 <section class="hero">
+                    <span class="eyebrow">About</span>
                     <h2 class="hero-title">MSc Astrophysics</h2>
-                    <p class="hero-summary">I am currently enrolled in the Master's program in Astrophysics at the University of Oslo. For my thesis, I am studying vector perturbations for a Lagrangian with terms describing elastic dark sector coupling.</p>
+                    <p class="hero-summary">I am a 23 y/o Norwegian student currently enrolled in the Astrophysics Master's programme at the University of Oslo. My academic interests are mostly in cosmology and theoretical physics. For my thesis, I am studying vector perturbations for cosmological models assuming elastic coupling in the dark sector using CLASS.</p>
+                    <p class="hero-summary">The coupling is velocity-dependent, acting like a drag force between the dark matter and dark energy fluids proportional to their relative four-velocity.</p>
                     <p class="equation">$$\nabla_\mu T^{\mu\nu}_\text{dm} = \bar{\alpha}(u^\nu_\text{de}-u^\nu_\text{dm}) = -\nabla_\mu T^{\mu\nu}_\text{de}$$</p>
-                    
+                    <p class="equation-cite">Elastic dark matter-dark energy coupling, following <a href="https://doi.org/10.1088/1475-7516/2021/07/022" class="course" target="_blank" rel="noopener noreferrer">Figueruelo et al.(2021)</a></p>
+
+                    <div class="hero-divider"></div>
+
+                    <div class="background-list">
+                        <div class="bg-group">
+                            <span class="bg-group-label">Degrees</span>
+                            <div class="bg-item">
+                                <div class="bg-head">
+                                    <h4>MSc Astrophysics / University of Oslo</h4>
+                                    <time>2025 — 2027</time>
+                                </div>
+                                <p>Institute of Theoretical Astrophysics</p>
+                                <p>Current candidate</p>
+                            </div>
+                            <div class="bg-item">
+                                <div class="bg-head">
+                                    <h4>BSc Physics and astronomy / University of Oslo</h4>
+                                    <time>2022 — 2025</time>
+                                </div>
+                                <p>Department of Physics</p>
+                                <p>Honours programme</p>
+                            </div>
+                            <div class="bg-item">
+                                <div class="bg-head">
+                                    <h4>Baccalauréat général</h4>
+                                    <time>2019 — 2022</time>
+                                </div>
+                                <p>Lycée Édouard Herriot, Lyon</p>
+                                <p>Mathématiques et Physique-Chimie</p>
+                            </div>
+                        </div>
+                        <div class="bg-group">
+                            <span class="bg-group-label">Further academic background</span>
+                            <div class="bg-item">
+                                <div class="bg-head">
+                                    <h4>Exchange @ Nagoya University</h4>
+                                    <time>2024 — 2025</time>
+                                </div>
+                                <p>Courses in Quantum Mechanics and Japanese</p>
+                                <p>One semester in Nagoya during BSc</p>
+                            </div>
+                            <div class="bg-item">
+                                <div class="bg-head">
+                                    <h4>4D Space School / Kyoto University</h4>
+                                    <time>2024</time>
+                                </div>
+                                <p>Plasma and space physics workshop</p>
+                                <p>Collaboration between Oslo and Kyoto</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="experience" class="section">
-                    <h3>Experience</h3>
+                    <h3>Work experience</h3>
                     <div class="experience-list">
                         <article class="exp-item">
                             <div class="exp-head">
-                                <h4>Teaching Assistant</h4>
-                                <time>2023 — Today</time>
+                                <h4>Teaching Assistant @ UiO</h4>
+                                <time>2023 — 2026</time>
                             </div>
                             <p>Department of Physics, University of Oslo</p>
                             <ul>
-                                <li>I have assisted in teaching the classical mechanics course <a href="https://www.uio.no/studier/emner/matnat/fys/FYS1105/index-eng.html" class="course">FYS1105</a> and the electromagnetism course <a href="https://www.uio.no/studier/emner/matnat/fys/FYS1120/index-eng.html" class="course">FYS1120</a> to undergraduate students and corrected assignments and exams.</li>
+                                <li>Assisted in teaching the classical mechanics course <a href="https://www.uio.no/studier/emner/matnat/fys/FYS1105/index-eng.html" class="course">FYS1105</a> three semesters and the electromagnetism course <a href="https://www.uio.no/studier/emner/matnat/fys/FYS1120/index-eng.html" class="course">FYS1120</a> one semester to undergraduate students, and corrected assignments and exams.</li>
+                            </ul>
+                        </article>
+                        <article class="exp-item">
+                            <div class="exp-head">
+                                <h4>Researcher @ NSM</h4>
+                                <time>Summer 2026</time>
+                            </div>
+                            <p>Norwegian National Security Authority</p>
+                            <ul>
+                                <li>Helped preparing the start up of quantum sensing laboratory.</li>
+                                <li>Researched Rydberg atom-based electrometry and wrote a compendium on the subject examplified by the study of Rydberg vapour cells and Rydberg atom arrays.</li>
                             </ul>
                         </article>
                     </div>
+                </section>
 
-                    <h3 >Projects</h3>
-                    <div class="projects-list">
-                        <div class="project-item">
-                            <h4>Astrophysical Simulations</h4>
-                            <p>Vector perturbations in dark energy models</p>
-                        </div>
-                        <div class="project-item">
-                            <h4>roterommet</h4>
-                            <p>"roterommet" is a jazz trio I have together with two great friends of mine that are also astrophysics students. The name "roterommet" is an hommage to J. O. Øgrim and H. Ormestad.</p>
-                        </div>
-                        <div class="project-item">
-                            <h4>Data Analysis Tools</h4>
-                            <p>Python tools for astrophysical data processing</p>
-                        </div>
+                <section class="section">
+                    <h3>Projects</h3>
+                    <p class="section-sub">A few things I've been working on</p>
+                    <div class="featured-grid">
+                        <a href="/projects/master.html" class="catalog-card">
+                            <div class="project-preview preview-master"></div>
+                            <div class="catalog-card-body">
+                                <h3>Dark Sector Coupling</h3>
+                                <p>Master thesis work, still under development. Simulating vector perturbations for elastic dark sector coupling using CLASS.</p>
+                                <div class="tag-pills">
+                                    <span class="tag-pill">Master</span>
+                                    <span class="tag-pill">Cosmology</span>
+                                    <span class="tag-pill">Perturbation theory</span>
+                                    <span class="tag-pill">CLASS</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/projects/eb-solver.html" class="catalog-card">
+                            <div class="project-preview preview-sim"></div>
+                            <div class="catalog-card-body">
+                                <h3>Einstein-Boltzmann Solver</h3>
+                                <p>A simple first principles-based Einstein-Boltzmann solver that simulates cosmic structure growth and the CMB from perturbations in the early Universe.</p>
+                                <div class="tag-pills">
+                                    <span class="tag-pill">Cosmology</span>
+                                    <span class="tag-pill">Perturbation theory</span>
+                                    <span class="tag-pill">C++</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    
+
                     <nav class="page-nav">
-                        <a href="projects.html" class="nav-link">View All Projects →</a>
+                        <a href="/projects.html" class="nav-link">View All Projects →</a>
                     </nav>
                 </section>
+
+                <p class="site-footer">2026 Felix Morland</p>
             </div>
         </div>
-
     </div>
-
-    <script>
-        // Add click handlers for navigation
-        document.querySelectorAll('.nav-icon').forEach(icon => {
-            icon.addEventListener('click', function() {
-                document.querySelectorAll('.nav-icon').forEach(i => i.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-
-        // Menu toggle animation
-        const menuToggle = document.querySelector('.menu-toggle');
-        menuToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            this.classList.toggle('active');
-        });
-
-        // Close menu when clicking elsewhere
-        document.addEventListener('click', function() {
-            menuToggle.classList.remove('active');
-        });
-    </script>
 </body>
 </html>
